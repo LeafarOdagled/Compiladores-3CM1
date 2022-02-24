@@ -13,8 +13,9 @@ import compilador.Lexico;
 
 public class Lexico {
     
-     int contador = 0;
+    int contador = 0;
     String validar = "";
+    String cad = ""; //va a ir guardando las validaciones
 
     
     public String Parseo(){
@@ -30,7 +31,7 @@ public class Lexico {
     public String Token(){
         
         char x; //para concatenar 
-        String cad = ""; //va a ir guardando las validaciones
+        
 
         x = validar.charAt(contador);//va analizando el String y guardarlo en X
         
@@ -112,17 +113,146 @@ public class Lexico {
         return cad;
     }
     
+       
+    public void Validar(){
+        switch (cad){
+            case "VAint":   //Palabra reservada para enteros
+            cad = "";
+            break;
+            
+            case "VAcad":   //Palabra reservada para cadena
+            cad = "";
+            break;
+            
+            case "VAchar":  //Palabra reservada para caracteres
+            cad = "";
+            break;
+            
+            case "VAdeci":  //Palabra reservada para decimales
+            cad = "";
+            break;
+            
+            case ",":   //Simbolo para separar elementos
+            cad = "";
+            break;
+            
+            case ";":   //Simbolo para declarar fin de setencia
+            cad = "";
+            break;
+               
+            case "VAprint": //Palabra reservada para imprimir en pantalla
+            cad = "";
+            break;
+            
+            case "VAscan":  //Palabra reservada para escanear
+            cad = "";
+            break;
+            
+            case "VAif":    //Palabra reservada para usar condicionales
+            cad = "";
+            break;
+                    
+            case "VAelse":  //Palabra reservada para complementar condicionales
+            cad = "";
+            break;
+            
+            case "VAelsif": //Palabra reservada para complementar el uso de condicionales
+            cad = "";
+            break;
+            
+            case "VAwhile": //Palabra reservada para hacer un ciclo
+            cad = "";
+            break;
+            
+            case "VAdo":    //Palabra reservada para complementar el ciclo
+            cad = "";
+            break;
+            
+            case "=":      //Simbolo relacional
+            cad = "";
+            break;
+            
+            case "==":     //Simbolo relacional
+            cad = "";
+            break;
+            
+            case "!=":     //Simbolo relacional
+            cad = "";
+            break;
+            
+            case "<=":     //Simbolo relacional
+            cad = "";
+            break;
+            
+            case ">=":     //Simbolo relacional
+            cad = "";
+            break;
+                
+            case "<":      //Simbolo relacional
+            cad = "";
+            break;
+            
+            case ">":      //Simbolo relacional
+            cad = "";
+            break;
+            
+            case "+":      //Operador matemático
+            cad = "";
+            break;
+            
+            case "-":     //Operador matemático
+            cad = "";
+            break;
+            
+            case "*":     //Operador matemático
+            cad = "";
+            break;
+            
+            case "/":     //Operador matemático
+            cad = "";
+            break;
+            
+            case "(":     //Operador matemático
+            cad = "";
+            break;
+            
+            case ")":     //Operador matemático
+            cad = "";
+            break;
+            
+            case "VAnot":   //Operador lógico
+            cad = "";
+            break;
+            
+            case "VAor":    //Operador lógico
+            cad = "";
+            break;
+            
+            case "VAand":   //Operador lógico
+            cad = "";
+            break;
+                
+            case "VAdef":   //Inicio de función
+            cad = "";
+            break;
+            
+            case "VAend":   //Fin de función
+            cad = "";
+            break;
+            
+            case "''":      //Para poner texto
+            cad = "";
+            break;
+            
+            default:
+                 
+        }
+        
+    }
+    
         public static void main(String[] args) {
         Lexico analizador = new Lexico();
         analizador.Parseo();
-        
-        System.out.println(""+analizador.Token());
-            System.out.println(""+analizador.Token()); //espacio en blanco
-        System.out.println(""+analizador.Token());
-            System.out.println(""+analizador.Token()); //espacio en blanco
-        System.out.println(""+analizador.Token());
-            System.out.println(""+analizador.Token()); //espacio en blanco
-        System.out.println(""+analizador.Token());     
-            System.out.println(""+analizador.Token()); //espacio en blanco
+
     }
 }

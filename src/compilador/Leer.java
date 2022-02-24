@@ -32,7 +32,7 @@ public class Leer {
      try {
          // Apertura del fichero y creacion de BufferedReader para poder
          // hacer una lectura comoda (disponer del metodo readLine()).
-         archivo = new File ("C:\\lectura/Analizador.txt");
+         archivo = new File ("texto.txt");
          fr = new FileReader (archivo);
          br = new BufferedReader(fr);
          
