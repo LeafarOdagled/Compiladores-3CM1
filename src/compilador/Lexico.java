@@ -105,19 +105,18 @@ public class Lexico {
                     }
                 }else contador--;
             }
-            
+            //Entra a la tabla
         }else{
-            if (x == 61){
+            if (x == 61){   //= y ==
                 cad += x;
                 contador ++;
                 x = validar.charAt(contador);
-
                     if (x == 61){
                     cad += x;
                     contador ++;
                     x = validar.charAt(contador);
                     }  
-        }if(x == 33){
+        }if(x == 33){  //!=
             cad += x;
             contador ++;
             x = validar.charAt(contador);
@@ -125,8 +124,8 @@ public class Lexico {
                     cad += x;
                     contador ++;
                     x = validar.charAt(contador);
-                    }
-        }if(x == 60){
+                }
+        }if(x == 60){  //<=
             cad += x;
             contador ++;
             x = validar.charAt(contador);
@@ -134,16 +133,24 @@ public class Lexico {
                     cad += x;
                     contador ++;
                     x = validar.charAt(contador);
-                    }
-        }if(x == 62){
-             cad += x;
+                }
+        }if(x == 62){ //>=
+            cad += x;
             contador ++;
             x = validar.charAt(contador);
                 if (x == 61){
                     cad += x;
                     contador ++;
                     x = validar.charAt(contador);
-                    }
+                }
+        }if(x == 60){ //<
+            cad += x;
+            contador ++;
+            x = validar.charAt(contador);
+        }if(x == 62){ //>                //HASTA AQUI VAMOS EN EL 20 DE LA TABLA
+            cad += x;
+            contador ++;
+            x = validar.charAt(contador);
         }
 
 
